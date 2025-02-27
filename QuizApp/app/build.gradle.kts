@@ -7,12 +7,16 @@ plugins {
 
 android {
     namespace = "com.imthiyas.quizapp"
-    compileSdk = 34
+    compileSdk = 35
+
+    viewBinding {
+        enable = true
+    }
 
     defaultConfig {
         applicationId = "com.imthiyas.quizapp"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -88,4 +92,6 @@ dependencies {
 
     implementation(libs.dagger.hilt.android)
     kapt(libs.hilt.compiler)
+
+    implementation(libs.androidx.fragment.ktx)
 }
