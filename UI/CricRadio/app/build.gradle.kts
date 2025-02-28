@@ -10,6 +10,14 @@ android {
     namespace = "com.imthiyas.cricradio"
     compileSdk = 35
 
+    buildFeatures {
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.15"
+    }
+
     defaultConfig {
         applicationId = "com.imthiyas.cricradio"
         minSdk = 24
@@ -30,11 +38,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
 }
 
@@ -56,7 +64,7 @@ dependencies {
     implementation(platform("androidx.compose:compose-bom:2025.02.00"))
 
 // Compose UI & Material 3
-    implementation("androidx.compose.ui:ui")
+    implementation(libs.androidx.ui)
     implementation("androidx.compose.material3:material3")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.activity:activity-compose:1.10.1")
