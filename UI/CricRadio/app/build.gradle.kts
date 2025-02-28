@@ -119,6 +119,16 @@ dependencies {
     implementation("com.jakewharton.timber:timber:5.0.1")
     implementation(libs.androidx.material.icons.extended)
 
+    // Ktor (Networking)
+    implementation("io.ktor:ktor-client-core:2.3.5")
+    implementation("io.ktor:ktor-client-cio:2.3.5") // or ktor-client-okhttp
+
+    // Ktor Content Negotiation and JSON Support
+    implementation("io.ktor:ktor-client-content-negotiation:2.3.5")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.5") // ✅ Use this instead of ktor-client-json
+
+    // Kotlinx Serialization
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
 
 
 }
