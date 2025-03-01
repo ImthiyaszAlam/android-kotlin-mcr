@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
 
 @Composable
 fun MiniScorecardScreen(
-    viewModel: MiniScorecardViewModel = hiltViewModel() // Use Hilt for ViewModel
+    viewModel: MiniScorecardViewModel = hiltViewModel()
 ) {
     val scorecardState = viewModel.miniScorecard.collectAsState()
 
