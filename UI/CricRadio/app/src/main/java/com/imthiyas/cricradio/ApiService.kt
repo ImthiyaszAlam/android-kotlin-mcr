@@ -4,8 +4,11 @@ import io.ktor.client.*
 import io.ktor.client.call.*
 import io.ktor.client.request.*
 import io.ktor.client.engine.cio.*
+import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.plugins.defaultRequest
+import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.Json
 
 private const val BASE_URL = "http://3.6.243.12:5001"
 private const val AUTH_HEADER = "Basic Y3JpY2tldFJhZGlvOmNyaWNrZXRAJCUjUmFkaW8xMjM="
@@ -21,8 +24,8 @@ data class MiniScorecardResponse(
 
 class ApiService {
     private val client = HttpClient(CIO) {
-        install(JsonFeature) {
-            serializer = KotlinxSerializer()
+        install(ContentNegotiation) {
+            json(Json { ignoreUnknownKeys = true })  // Use the new JSON serialization
         }
         defaultRequest {
             header("Authorization", AUTH_HEADER)

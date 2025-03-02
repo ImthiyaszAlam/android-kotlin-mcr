@@ -7,3 +7,13 @@
 ✔️ Error Handling: Basic exception handling included
 ✔️ Adaptive UI: Ensures responsiveness on different devices
 ✔️ GitHub Setup: Steps provided to push the project
+
+
+💡 Summary
+✅ Jetpack Compose UI
+✅ Ktor for API Calls
+✅ Dagger Hilt for Dependency Injection
+✅ MVVM Architecture
+✅ Secure API Authentication
+✅ Modular, Reusable, and Testable Code
+✅ GitHub Deployment

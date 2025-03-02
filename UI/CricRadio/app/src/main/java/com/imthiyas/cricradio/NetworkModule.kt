@@ -1,6 +1,6 @@
 package com.example.cricradio.di
 
-import com.imthiyas.cricradio.ApiService
+import com.example.cricradio.data.remote.ApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
