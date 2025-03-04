@@ -1,4 +1,4 @@
-package com.imthiyas.mvvm
+package com.imthiyas.mvvm.model
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao

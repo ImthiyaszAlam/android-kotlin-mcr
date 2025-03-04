@@ -1,4 +1,4 @@
-package com.imthiyas.mvvm
+package com.imthiyas.mvvm.model
 
 import android.content.Context
 import androidx.room.Database
@@ -20,7 +20,7 @@ abstract class QuoteDatabase : RoomDatabase() {
                         QuoteDatabase::class.java,
                         "quote_db"
                     )
-                        .createFromAsset("quote")
+                        .createFromAsset("quotes")
                         .build()
                 }
             }
