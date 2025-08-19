@@ -1,4 +1,4 @@
-package com.imthiyas.weatherapp
+package com.imthiyas.weatherapp.ui.main
 
 import android.os.Bundle
 import android.util.Log
@@ -7,7 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
-import com.imthiyas.weatherapp.repository.WeatherRepository
+import com.imthiyas.weatherapp.R
+import com.imthiyas.weatherapp.data.repository.WeatherRepository
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {

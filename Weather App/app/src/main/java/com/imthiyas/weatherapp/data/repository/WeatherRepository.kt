@@ -1,4 +1,4 @@
-package com.imthiyas.weatherapp.repository
+package com.imthiyas.weatherapp.data.repository
 
 import com.imthiyas.weatherapp.data.model.WeatherResponse
 import com.imthiyas.weatherapp.data.remote.RetrofitInstance
