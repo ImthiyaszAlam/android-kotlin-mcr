@@ -6,12 +6,18 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.imthiyas.weatherapp.R
+import com.imthiyas.weatherapp.data.model.Weather
 import com.imthiyas.weatherapp.data.repository.WeatherRepository
+import com.imthiyas.weatherapp.util.Resource
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var viewModel: WeatherViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -23,10 +29,26 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        lifecycleScope.launch {
-            val repo = WeatherRepository()
-            val result = repo.getWeather("Delhi")
-            Log.d("WeatherApp", "Temp: ${result.main.temp}, City: ${result.name}")
+        val repository = WeatherRepository()
+        val factory = WeatherViewModelFactory(repository)
+        viewModel = ViewModelProvider(this, factory)[WeatherViewModel::class.java]
+
+        viewModel.weather.observe(this) { resource ->
+            when (resource) {
+                is Resource.Loading -> Log.d("WeatherApp", "Loading...")
+                is Resource.Success -> {
+                    Log.d(
+                        "WeatherApp",
+                        "City: ${resource.data?.name}, Temp: ${resource.data?.main?.temp}"
+                    )
+                }
+
+                is Resource.Error -> Log.e("WeatherApp", "Error: ${resource.message}")
+            }
         }
+
+        viewModel.fetchWeather("Delhi")
+
+
     }
 }
