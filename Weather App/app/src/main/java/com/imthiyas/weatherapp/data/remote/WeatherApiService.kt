@@ -1,6 +1,6 @@
 package com.imthiyas.weatherapp.data.remote
 
-import com.imthiyas.weatherapp.data.model.WeatherResponse
+import com.imthiyas.weatherapp.domain.model.WeatherResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 

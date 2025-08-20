@@ -1,6 +1,6 @@
 package com.imthiyas.weatherapp.data.repository
 
-import com.imthiyas.weatherapp.data.model.WeatherResponse
+import com.imthiyas.weatherapp.domain.model.WeatherResponse
 import com.imthiyas.weatherapp.data.remote.RetrofitInstance
 import com.imthiyas.weatherapp.util.Constants
 

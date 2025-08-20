@@ -1,4 +1,4 @@
-package com.imthiyas.weatherapp.data.model
+package com.imthiyas.weatherapp.domain.model
 
 data class Weather(
     val description: String

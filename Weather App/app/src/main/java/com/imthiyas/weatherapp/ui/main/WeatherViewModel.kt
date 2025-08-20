@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.imthiyas.weatherapp.data.model.WeatherResponse
+import com.imthiyas.weatherapp.domain.model.WeatherResponse
 import com.imthiyas.weatherapp.data.repository.WeatherRepository
 import com.imthiyas.weatherapp.util.Resource
 import kotlinx.coroutines.launch

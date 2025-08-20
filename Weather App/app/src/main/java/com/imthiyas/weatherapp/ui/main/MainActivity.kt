@@ -9,7 +9,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.imthiyas.weatherapp.R
-import com.imthiyas.weatherapp.data.model.Weather
+import com.imthiyas.weatherapp.domain.model.Weather
 import com.imthiyas.weatherapp.data.repository.WeatherRepository
 import com.imthiyas.weatherapp.util.Resource
 import kotlinx.coroutines.launch
