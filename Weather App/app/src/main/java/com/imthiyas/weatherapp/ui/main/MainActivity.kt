@@ -48,6 +48,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         viewModel.fetchWeather("Delhi")
+        viewModel.fetchWeather("Mumbai")
+        viewModel.fetchWeather("Kolkata")
+        viewModel.fetchWeather("Assam")
 
 
     }
