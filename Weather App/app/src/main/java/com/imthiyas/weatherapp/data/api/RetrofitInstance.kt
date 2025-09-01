@@ -1,4 +1,4 @@
-package com.imthiyas.weatherapp.data.remote
+package com.imthiyas.weatherapp.data.api
 
 import com.imthiyas.weatherapp.util.Constants
 import retrofit2.Retrofit
